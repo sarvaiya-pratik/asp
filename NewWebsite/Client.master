@@ -1,0 +1,53 @@
+﻿<%@ Master Language="VB" CodeFile="Client.master.vb" Inherits="NewWebsite_Client" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 330px;
+        }
+        .style2
+        {
+            width: 156px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td colspan="2">
+                Welcome to Client site</td>
+        </tr>
+        <tr>
+            <td class="style2">
+                <asp:HyperLink ID="HyperLink1" runat="server" 
+                    NavigateUrl="~/NewWebsite/home_client.aspx">Home</asp:HyperLink>
+                <br />
+                <br />
+                <asp:HyperLink ID="HyperLink2" runat="server" 
+                    NavigateUrl="~/NewWebsite/client_det.aspx">Client_det</asp:HyperLink>
+                <br />
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server">Logout</asp:LinkButton>
+            </td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Footer</td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
